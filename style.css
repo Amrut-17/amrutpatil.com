@@ -89,7 +89,7 @@
 
 .sticky{
     background-color: black;
-    padding: 18px 0;
+    padding: 10px 0;
 }
 
 .sticky .navbar-menu a{
@@ -103,7 +103,7 @@
 #home{
     height: 100vh;
     min-height: 500px;
-    background: url(./pexels-hasan-albari-1229861.jpg);
+    background: url(/images/pexels-hasan-albari-1229861.jpg);
     /* background: black; */
     background-size: cover;
     background-attachment: fixed;
@@ -263,7 +263,7 @@ section.about{
     /* background-color: #f1f1f1; */
     height: 100vh;
     min-height: 500px;
-    background-image: url(./vidar-nordli-mathisen-b6AqNqVxc_Q-unsplash.jpg);
+    background-image: url(/images/vidar-nordli-mathisen-b6AqNqVxc_Q-unsplash.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -311,10 +311,10 @@ section.about{
 section.sndp{
     padding: 100px 0;
     
-/*     background: url(./solid_blue.jpg); */
-    background:linear-gradient(to bottom right, black, gray, white);
+    /* background: url(/images/solid_blue.jpg); */
+    background:linear-gradient(to bottom right, black, rgb(36, 35, 35), rgb(129, 125, 125));
     height: 100vh;
-/*     min-height: 500px; */
+    min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -430,6 +430,7 @@ section.sndp{
     height: 250px;
 }
 
+
 /* ---------------- PROJECTS ------------- */
 section.projects{
     background-color: #16384c;
@@ -497,15 +498,119 @@ section.projects{
     transition-delay: 0.3s;
 }
 
+.contact-info{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-info .item{
+    width: calc(33% - 20px);
+    height: 160px;
+    background-color: #353b4d;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+section .contact{
+    height: 100vh;
+}
+.contact-info i{
+    display: block;
+    font-size: 40px;
+    line-height: 120px;
+    height: 100px;
+}
 
+.contact-info .item:hover{
+    background: #48dbfb;
+}
 
+.contact-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: #353b48;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.nameZone, .emailZone{
+    max-width: calc(50% - 10px);
+    resize: vertical;
+}
+.contact-form .btn{
+    width: 180px;
+    background-color: transparent;
+    color: #48dbfb;
+    font-size: 16px;
+    border: 2px solid #48dbfb;
+    padding: 0;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.contact-form .btn:hover{
+    background: #48dbfb;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    font-size: large;
+}
+
+footer{
+    background:url(/images/footer.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.copyright{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.copyright a{
+    font-size: 16px;
+    color: #48dbfb;
+    font-weight: 500;
+}
+
+.goTop{
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #48dbfb;
+    border: none;
+    border-radius: 50% ;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    display: none;
+}
 
 
 
 
 @media screen and (max-width:980px){
     #home{
-        background: url(./mobileView.jpg);
+        background: url(/images/mobileView.jpg);
         background-size: cover;
         background-attachment: fixed;
     }
@@ -542,15 +647,19 @@ section.projects{
         right: -100%;
         max-width: 400px;
         padding: 80px 30px;
-        /* transition: .2s linear; */
+        transition: .5s linear ;
     }
     .navbar-menu a{
         font-size: 30px;
         /* margin-top: 3px; */
     }
 
+    .sticky{
+        padding: 6px 0px ;
+    }
+
     .sticky .navbar-menu{
-        background-color: #f1f1f1;
+        background-color: black;
     }
 
     .navbar-menu.active{
@@ -558,7 +667,7 @@ section.projects{
     }
 
     .menu-toggler{
-        margin-top: -10px;
+        margin-top: -4px;
         margin-right: -15px;
     }
     .menu-toggler.active span:nth-child(1){
@@ -647,11 +756,15 @@ section.projects{
         margin-left: 50px;
     }
 
+
     /* ----------- PROJECTS ---------- */
     section.projects{
         height: 115vh;
     }
-    
+    .projects .prj{
+        margin-left: 100px;
+        text-align: center;
+    }
     .project{
         display: flex;
         flex-direction: column;
@@ -662,7 +775,7 @@ section.projects{
         /* margin-top: -50px; */
         width: 250px;
         height: 100px;
-        margin-left: -10px;
+        margin-left: -70px;
         padding: 0px;
         display: flex;
         flex-direction: column;
@@ -682,6 +795,20 @@ section.projects{
     .card:hover .desc{
         margin-top: -60px;
     }
+
+
+
+    /* CONTACT AND FOOTER */
+    .contact-info .item{
+        width: 100%;
+        margin: 10px 0;
+
+    }
+
+    .nameZone, .emailZone{
+        max-width: 100%;
+    }
+
 }
 
 
