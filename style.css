@@ -570,7 +570,7 @@ section .contact{
 }
 
 footer{
-    background:url(/images/footer.jpg);
+    background:url(./footer.jpg);
     background-size: cover;
     background-attachment: fixed; 
     color: #fff;
