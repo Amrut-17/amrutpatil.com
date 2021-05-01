@@ -103,7 +103,7 @@
 #home{
     height: 100vh;
     min-height: 500px;
-    background: url(/images/pexels-hasan-albari-1229861.jpg);
+    background: url(./pexels-hasan-albari-1229861.jpg);
     /* background: black; */
     background-size: cover;
     background-attachment: fixed;
@@ -263,7 +263,7 @@ section.about{
     /* background-color: #f1f1f1; */
     height: 100vh;
     min-height: 500px;
-    background-image: url(/images/vidar-nordli-mathisen-b6AqNqVxc_Q-unsplash.jpg);
+    background-image: url(./vidar-nordli-mathisen-b6AqNqVxc_Q-unsplash.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -610,7 +610,7 @@ footer{
 
 @media screen and (max-width:980px){
     #home{
-        background: url(/images/mobileView.jpg);
+        background: url(./mobileView.jpg);
         background-size: cover;
         background-attachment: fixed;
     }
